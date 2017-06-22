@@ -1,0 +1,5 @@
+temp
+*.utf8
+model.json
+node_modules
+npm-debug.log

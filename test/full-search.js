@@ -1,7 +1,7 @@
-var seagull = require('../lib')
+var racci = require('../lib')
 
 
-var search = new seagull.Search()
+var search = new racci.Search()
 
 var res1 = search.full("流星雨")
 

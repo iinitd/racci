@@ -1,4 +1,4 @@
-var seagull = require('../lib')
+var racci = require('../lib')
 var fs = require('fs')
 
 var docs = fs.readFileSync("./docs/docs.txt")

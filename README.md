@@ -1,8 +1,8 @@
 # Racci
 
-A lightweight search engine for Node.js, Chinese supported.
+[![npm version](https://badge.fury.io/js/racci.svg)](https://badge.fury.io/js/racci) [![Build Status](https://travis-ci.org/cogons/racci.svg?branch=master)](https://travis-ci.org/cogons/racci)
 
-[DEMO](https://github.com/cogons/music-racci)
+A lightweight search engine for Node.js, Chinese supported.
 
 # Feature
 
@@ -81,4 +81,11 @@ racci.Search.search("singer", "周杰伦",1,1)
 ```
 
 [Examples](https://github.com/cogons/racci/tree/master/examples) 
+
+# Implementation
+
+A music search engine based on Express
+
+[HERE](https://github.com/cogons/music-racci) 
+
 

@@ -1,7 +1,7 @@
 var seagull = require('../lib')
 var fs = require('fs')
 
-seagull.Parser.simple("singer", "doc_id", "singer")
+seagull.Parser.simple("singer", "doc_id", ["singer", "composer"])
 
 console.log(seagull.get("singer_idx"))
 

@@ -9,7 +9,9 @@ fs.readFileSync("./docs/docs.txt")
     .toString('utf-8')
     .split("\n")
     .forEach((doc) => {
-        docs[i++] = JSON.parse(doc).result
+        var obj = JSON.parse(doc).result
+        obj.doc_id = i
+        docs[i++] = obj
     })
 
 fs.writeFileSync("./docs/docs.json", JSON.stringify(docs))

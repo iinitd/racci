@@ -55,22 +55,25 @@ racci.Parser.init("singer", ["singer","composer"], "commit_count")
 ### Step 4: Search!
 
 ```js
-racci.Search.simple("corpus", "流星雨")
+racci.Search.search("corpus", "流星雨",0,0)
 
-// [ { doc: '1', score: 0.21711158148190035 },
-//  { doc: '2', score: 0.09759750074094325 } ]
+// [ { doc: '1',},
+//  { doc: '2'} ]
 
-racci.Search.simple("singer", "周杰伦")
+// first flag: show doc details or not
+// second flag: show score or not
+
+racci.Search.search("singer", "周杰伦",0,1)
 
 // [ { doc: '1', score: '57' },
 //   { doc: '2', score: '22' }]
 
-racci.Search.full("corpus", "流星雨")
+racci.Search.search("corpus", "流星雨",1,0)
 
-// [ { doc: [Object], score: 0.21711158148190035 },
-//  { doc: [Object], score: 0.09759750074094325 } ]
+// [ { doc: [Object] },
+//  { doc: [Object] } ]
 
-racci.Search.full("singer", "周杰伦")
+racci.Search.search("singer", "周杰伦",1,1)
 
 // [ { doc: [Object], score: '57' },
 //   { doc: [Object], score: '22' }]

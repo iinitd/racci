@@ -42,17 +42,37 @@ racci.Parser.import(docs)
 // full-text search model
 racci.Parser.init("corpus", ["lyrics", "singer", "composer", 'songwritter', 'album'], [1, 20, 3, 2, 1])
 
+// name, search from these fields, field weight for ranking.
+
 // field search model
-racci.Parser.init("singer", "singer", "commit_count")
+racci.Parser.init("singer", ["singer","composer"], "commit_count")
+
+// name, search from these fields, sort by this field.
+
 ```
 ### Step 4: Search!
 
 ```js
 racci.Search.simple("corpus", "流星雨")
+
+// [ { doc: '1', score: 0.21711158148190035 },
+//  { doc: '2', score: 0.09759750074094325 } ]
+
 racci.Search.simple("singer", "周杰伦")
 
+// [ { doc: '1', score: '57' },
+//   { doc: '2', score: '22' }]
+
 racci.Search.full("corpus", "流星雨")
+
+// [ { doc: [Object], score: 0.21711158148190035 },
+//  { doc: [Object], score: 0.09759750074094325 } ]
+
 racci.Search.full("singer", "周杰伦")
+
+// [ { doc: [Object], score: '57' },
+//   { doc: [Object], score: '22' }]
+
 ```
 
 [Examples](https://github.com/cogons/racci/tree/master/examples) 
